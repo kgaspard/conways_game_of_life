@@ -67,4 +67,3 @@ if __name__ == "__main__":
     startingshape = shapes[options.startingshape] if options.startingshape in shapes else string_to_array(options.startingshape)
     board = Board(size=options.size, active_list=startingshape, periodic=options.periodic)
     board.animate(iterations=options.iterations)
-
