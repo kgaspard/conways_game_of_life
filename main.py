@@ -20,13 +20,12 @@ class Board:
         neighbours = []
         for ii in range(3):
             for jj in range(3):
+                x,y = i+ii-1, j+jj-1
                 if self.periodic:
-                    x,y = i+ii-1, j+jj-1
                     x = x % self.size
                     y = y % self.size
                     if (x != i or y != j): neighbours.append((x,y))
                 else:
-                    x,y = i+ii-1,j+jj-1
                     if x >= 0 and x < self.size and y >= 0 and y < self.size and (x != i or y != j):
                         neighbours.append((x,y))
         return neighbours
